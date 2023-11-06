@@ -1,3 +1,5 @@
 <?php
 
-Timber::render( 'index.twig' );
+$context = Timber::context();
+
+Timber::render('index.twig', $context);

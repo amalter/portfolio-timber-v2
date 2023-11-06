@@ -1,14 +1,14 @@
 {
-  "name": "timber/getting-started-theme",
+  "name": "timber/amber-alter-portfolio",
   "type": "wordpress-theme",
-  "description": "A minimal theme that serves as an entry point for learning about Timber.",
+  "description": "A theme built with Timber/Twig for AmberAlter.com",
   "require": {
     "timber/timber": "2.0.0-rc.1"
   },
   "authors": [
     {
-      "name": "Lukas Gaechter",
-      "email": "lukas.gaechter@mind.ch"
+      "name": "Amber Alter",
+      "email": "amber@altersego.net"
     }
   ],
   "config": {
