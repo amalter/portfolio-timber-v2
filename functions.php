@@ -55,4 +55,6 @@ Timber::$dirname = array( 'templates', 'views' );
 Timber::$autoescape = false;
 
 
-require 'AmberPortfolioTheme.php';
+require __DIR__ . '/functions/AmberPortfolioTheme.php';
+require __DIR__ . '/functions/theme-setup/register-customize.php';
+
