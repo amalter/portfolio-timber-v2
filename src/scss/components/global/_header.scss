@@ -3,4 +3,7 @@
   text-align: center;
   padding: $spacing--sm;
   z-index: 10;
+  .site-logo-link {
+    font-size: $font-size-md-sm;
+  }
 }

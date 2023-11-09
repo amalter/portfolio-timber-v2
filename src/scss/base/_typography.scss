@@ -16,7 +16,7 @@ h1 {
   font-size: $font-size-xxl;
   &.site-logo {
     font-family: $font-family-logo;
-    font-size: $font-size-normal;
+    font-size: $font-size-body;
     font-weight: $font-weight-normal;
     margin: 0 auto;
   }
@@ -29,14 +29,14 @@ h3 {
 }
 
 h4 {
-  font-size: $font-size-med;
+  font-size: $font-size-md;
 }
 
 h5 {
-  font-size: $font-size-normal;
+  font-size: $font-size-body;
 }
 h5 {
-  font-size: $font-size-small;
+  font-size: $font-size-sm;
 }
 a {
   &.site-logo-link {
@@ -45,5 +45,5 @@ a {
   }
 }
 .site-footer {
-  font-size: $font-size-small;
+  font-size: $font-size-sm;
 }
