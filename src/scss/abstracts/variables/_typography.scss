@@ -1,4 +1,17 @@
 @font-face {
+  font-family: "Amita";
+  src: url("/wp-content/themes/portfolio-timber-v2/assets/fonts/Amita-Regular.ttf")
+    format("truetype");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Amita";
+  src: url("/wp-content/themes/portfolio-timber-v2/assets/fonts/Amita-Bold.ttf")
+    format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
   font-family: "OtomanopeeOne";
   src: url("/wp-content/themes/portfolio-timber-v2/assets/fonts/OtomanopeeOne-Regular.ttf")
     format("truetype");
@@ -26,6 +39,7 @@
 }
 
 //font-family
+$font-family-logo: "Amita", Helvetica, Arial, sans-serif;
 $font-family-body: "Oxygen", Helvetica, Arial, sans-serif;
 $font-family-heading: "OtomanopeeOne", Helvetica, Arial, sans-serif;
 

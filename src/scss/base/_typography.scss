@@ -1,5 +1,6 @@
 body {
   font-family: $font-family-body;
+  color: $black;
 }
 h1,
 h2,
@@ -13,6 +14,12 @@ h6 {
 
 h1 {
   font-size: $font-size-xxl;
+  &.site-logo {
+    font-family: $font-family-logo;
+    font-size: $font-size-normal;
+    font-weight: $font-weight-normal;
+    margin: 0 auto;
+  }
 }
 h2 {
   font-size: $font-size-xl;
@@ -29,5 +36,14 @@ h5 {
   font-size: $font-size-normal;
 }
 h5 {
+  font-size: $font-size-small;
+}
+a {
+  &.site-logo-link {
+    text-decoration: none;
+    color: black;
+  }
+}
+.site-footer {
   font-size: $font-size-small;
 }

@@ -1,0 +1,10 @@
+.site-footer {
+  background-color: $gray-light;
+  padding: $spacing--xs;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  img {
+    width: 24px;
+  }
+}
