@@ -1,11 +1,13 @@
 .site-footer {
-  background-color: $gray-light;
+  background-color: $black;
   padding: $spacing--xs $spacing--sm;
   display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 10;
+  color: $white;
   img {
     width: 24px;
+    margin-left: $spacing--xs;
   }
 }
