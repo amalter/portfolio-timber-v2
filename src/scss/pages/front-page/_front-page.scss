@@ -9,14 +9,25 @@ body.front-page {
           height: 100%;
           width: 100%;
         }
-
+        //shared styles
         &.home-portfolio,
         &.home-about {
+          z-index: 1;
           position: absolute;
           width: 100%;
           top: 0;
+          background-color: $white;
+          margin: $header-height 0 $footer-height 0;
+
           .wp-block-group__inner-container {
             max-width: 980px;
+            &:after {
+              font-family: $font-family-heading;
+              font-size: $font-size-xxl;
+              position: absolute;
+              top: calc(50vh - 105px);
+              transform: rotate(270deg);
+            }
           }
         }
       }
