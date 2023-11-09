@@ -2,11 +2,9 @@
 
 body.front-page {
   .front-page_wrapper {
-    height: calc(100vh - 72px);
     article.post-type-page {
-      height: 100%;
       .home-section {
-        height: 100%;
+        height: $panel-height;
         .wp-block-group__inner-container {
           height: 100%;
           width: 100%;
@@ -17,6 +15,9 @@ body.front-page {
           position: absolute;
           width: 100%;
           top: 0;
+          .wp-block-group__inner-container {
+            max-width: 980px;
+          }
         }
       }
     }
@@ -25,6 +26,14 @@ body.front-page {
 
 body.front-page.admin-bar {
   .front-page_wrapper {
-    height: calc(100vh - 104px);
+    article.post-type-page {
+      .home-section {
+        height: $admin-panel-height;
+        &.home-portfolio,
+        &.home-about {
+          top: $admin-toolbar-height;
+        }
+      }
+    }
   }
 }

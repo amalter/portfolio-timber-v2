@@ -111,7 +111,7 @@ class AmberPortfolioTheme extends Timber\Site {
 
     public function apt_add_styles_scripts() {
         // Load the theme stylesheet & scripts
-      //  wp_enqueue_script('apt-theme-scripts', get_stylesheet_directory_uri() . '/dist/js/theme.js', array( 'jquery' ), null, true);
+        wp_enqueue_script('apt-theme-scripts', get_stylesheet_directory_uri() . '/dist/js/all.min.js', array(), null, true);
         wp_enqueue_style('apt-theme-styles', get_stylesheet_directory_uri() . '/dist/css/style.min.css', false, null, 'all');
         
     }

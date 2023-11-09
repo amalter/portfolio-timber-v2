@@ -3,3 +3,14 @@ $white: #fff;
 $gray-light: #d9d9d9;
 $gray-med: #a09e9e;
 $gray-dark: #787878;
+
+$home-nav-gradient: linear-gradient(
+    45deg,
+    #fff 0%,
+    rgba(0, 255, 255, 0.25) 5%,
+    rgba(255, 0, 255, 0.25) 40%,
+    rgba(255, 0, 255, 0.25) 60%,
+    rgba(0, 255, 255, 0.25) 95%,
+    #fff 100%
+  )
+  var(--p, 0) / var(--p, 0) no-repeat;
