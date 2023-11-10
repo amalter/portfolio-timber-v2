@@ -1,0 +1,35 @@
+/* -------------------------------------------------------------------- *
+ * ---  Abstracts: Mixins
+ * -------------------------------------------------------------------- */
+
+// Mixin to manage responsive breakpoints
+@mixin breakpoint($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media #{inspect(map-get($breakpoints, $breakpoint))} {
+      @content;
+    }
+  } @else {
+    @media #{"( min-width: #{$breakpoint})"} {
+      @content;
+    }
+
+    @warn "Custom Breakpoint Set: `#{$breakpoint}`. "
+        (+"Please consider using an available breakpoint: #{map-keys($breakpoints)}.");
+  }
+}
+
+// Mixin to manage responsive breakpoints (max-width)
+@mixin breakpoint-max($breakpoint) {
+  @if map-has-key($breakpoints-max, $breakpoint) {
+    @media #{inspect(map-get($breakpoints-max, $breakpoint))} {
+      @content;
+    }
+  } @else {
+    @media #{"( min-width: #{$breakpoint})"} {
+      @content;
+    }
+
+    @warn "Custom Breakpoint Set: `#{$breakpoint}`. "
+        (+"Please consider using an available breakpoint: #{map-keys($breakpoints-max)}.");
+  }
+}
