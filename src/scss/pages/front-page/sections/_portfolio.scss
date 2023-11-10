@@ -3,35 +3,50 @@ body.front-page {
   .front-page_wrapper {
     article.post-type-page {
       .home-section.home-portfolio {
-        left: 100%;
-
-        .wp-block-group__inner-container {
+        @include mq("md", "max") {
           .eye-outer {
-            display: flex;
-            align-items: flex-start;
-            justify-content: center;
-            margin-top: 15px;
-            svg {
-              display: block;
-              width: 60px;
-              height: 60px;
-              pointer-events: none;
-              transform-style: preserve-3d;
-              circle.eye {
-                fill: $black;
-              }
-              path.top,
-              path.bottom {
-                fill: transparent;
-                stroke: $black;
-                stroke-width: 1.3px;
-                stroke-linecap: round;
-              }
+            display: none;
+          }
+          .section-header.portfolio-header {
+            &:before {
+              content: url("/wp-content/themes/portfolio-timber-v2/assets/icons/eye-regular.svg");
             }
           }
-          &:after {
-            content: "Portfolio";
-            right: -72px;
+        }
+        @include mq("md", "min") {
+          left: 100%;
+        }
+
+        .wp-block-group__inner-container {
+          @include mq("md", "min") {
+            .eye-outer {
+              display: flex;
+              align-items: flex-start;
+              justify-content: center;
+              margin-top: 15px;
+              svg {
+                display: block;
+                width: 60px;
+                height: 60px;
+                pointer-events: none;
+                transform-style: preserve-3d;
+                circle.eye {
+                  fill: $black;
+                }
+                path.top,
+                path.bottom {
+                  fill: transparent;
+                  stroke: $black;
+                  stroke-width: 1.3px;
+                  stroke-linecap: round;
+                }
+              }
+            }
+
+            &:after {
+              content: "Portfolio";
+              right: -72px;
+            }
           }
         }
       }

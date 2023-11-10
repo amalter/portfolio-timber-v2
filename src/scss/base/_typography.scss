@@ -28,6 +28,12 @@ h1 {
 }
 h2 {
   font-size: $font-size-xl;
+  &.section-header {
+    font-size: $font-size-lg;
+    @include mq("md", "min") {
+      font-size: $font-size-xxl;
+    }
+  }
 }
 h3 {
   font-size: $font-size-lg;
