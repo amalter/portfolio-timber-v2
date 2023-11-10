@@ -4,6 +4,7 @@ body.front-page {
   .front-page_wrapper {
     article.post-type-page {
       .home-section {
+        margin-top: $header-height;
         height: $panel-height;
         .wp-block-group__inner-container {
           height: 100%;
