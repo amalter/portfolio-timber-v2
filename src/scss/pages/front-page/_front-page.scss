@@ -4,7 +4,6 @@ body.front-page {
   .front-page_wrapper {
     article.post-type-page {
       .home-section {
-        margin-top: $header-height;
         @include mq("md", "min") {
           height: $panel-height;
         }
