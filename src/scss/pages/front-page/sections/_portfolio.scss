@@ -3,7 +3,7 @@ body.front-page {
   .front-page_wrapper {
     article.post-type-page {
       .home-section.home-portfolio {
-        left: 100%;
+        //    left: 100%;
 
         .wp-block-group__inner-container {
           .eye-outer {
@@ -18,12 +18,12 @@ body.front-page {
               pointer-events: none;
               transform-style: preserve-3d;
               circle.eye {
-                fill: #a1a1b6;
+                fill: $black;
               }
               path.top,
               path.bottom {
                 fill: transparent;
-                stroke: #a1a1b6;
+                stroke: $black;
                 stroke-width: 1.3px;
                 stroke-linecap: round;
               }
