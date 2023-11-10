@@ -45,7 +45,10 @@ body.front-page {
 
             a {
               font-family: $font-family-heading;
-              font-size: $font-size-xxl;
+              font-size: $font-size-lg;
+              @include mq("md", "min") {
+                font-size: $font-size-xxl;
+              }
               text-decoration: none;
               color: $black;
               width: 100%;
@@ -54,10 +57,15 @@ body.front-page {
               &:before {
                 content: "";
                 display: inline-block;
-                width: 45px;
+                width: 30px;
                 position: relative;
-                left: -$spacing--md;
-                bottom: $spacing--xs;
+                left: -$spacing--sm;
+                bottom: 0;
+                @include mq("md", "min") {
+                  width: 45px;
+                  left: -$spacing--md;
+                  bottom: $spacing--xs;
+                }
               }
               &#portfolio:before {
                 content: url("/wp-content/themes/portfolio-timber-v2/assets/icons/eye-regular.svg");

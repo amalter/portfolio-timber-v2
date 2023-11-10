@@ -11,51 +11,13 @@ $breakpoint--xl: 1200px;
 $breakpoint--xxl: 1400px;
 
 $breakpoints: (
-  "xxs": (
-    min-width: $breakpoint--xs,
-  ),
-  "xs": (
-    min-width: $breakpoint--xs,
-  ),
-  "sm": (
-    min-width: $breakpoint--sm,
-  ),
-  "md": (
-    min-width: $breakpoint--md,
-  ),
-  "lg": (
-    min-width: $breakpoint--lg,
-  ),
-  "xl": (
-    min-width: $breakpoint--xl,
-  ),
-  "xxl": (
-    min-width: $breakpoint--xxl,
-  ),
-);
-
-$breakpoints-max: (
-  "xxs": (
-    max-width: $breakpoint--xxs - 1,
-  ),
-  "xs": (
-    max-width: $breakpoint--xs - 1,
-  ),
-  "sm": (
-    max-width: $breakpoint--sm - 1,
-  ),
-  "md": (
-    max-width: $breakpoint--md - 1,
-  ),
-  "lg": (
-    max-width: $breakpoint--lg - 1,
-  ),
-  "xl": (
-    max-width: $breakpoint--xl - 1,
-  ),
-  "xxl": (
-    max-width: $breakpoint--xxl - 1,
-  ),
+  "xxs": $breakpoint--xs,
+  "xs": $breakpoint--xs,
+  "sm": $breakpoint--sm,
+  "md": $breakpoint--md,
+  "lg": $breakpoint--lg,
+  "xl": $breakpoint--xl,
+  "xxl": $breakpoint--xxl,
 );
 
 /* -------------------------------------------------------------------- *
