@@ -3,22 +3,23 @@ body.front-page {
   .front-page_wrapper {
     article.post-type-page {
       .home-section.home-about {
+        @include mq("md", "min") {
+          display: none;
+          right: 100%;
+        }
         .section-header.about-header {
+          @include mq("xl", "min") {
+            left: -32px;
+          }
           &:before {
             content: url("/wp-content/themes/portfolio-timber-v2/assets/icons/star-regular.svg");
-          }
-          @include mq("md", "min") {
-            right: 100%;
           }
         }
 
         .wp-block-group__inner-container {
-          @include mq("md", "min") {
-            &:after {
-              content: "About";
-              left: -32px;
-            }
-          }
+          // @include mq("md", "min") {
+
+          // }
         }
       }
     }

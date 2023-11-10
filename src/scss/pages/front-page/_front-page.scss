@@ -22,6 +22,11 @@ body.front-page {
           border: solid 2px #000;
           background-color: $white;
           margin: $header-height 0 $footer-height 0;
+
+          @include mq("md", "min") {
+            position: absolute;
+            top: 0;
+          }
           .section-header {
             &:before {
               content: "";
@@ -29,31 +34,19 @@ body.front-page {
               width: 45px;
               display: block;
               margin: auto;
-              @include mq("md", "min") {
-                //  width: 45px;
-                // left: -$spacing--md;
-                // bottom: $spacing--xs;
+              @include mq("xl", "min") {
+                display: none;
               }
             }
-
-            @include mq("md", "min") {
+            @include mq("xl", "min") {
               position: absolute;
-              top: 0;
+              top: calc(50vh - 105px);
+              transform: rotate(270deg);
             }
           }
 
           .wp-block-group__inner-container {
             max-width: 980px;
-
-            @include mq("md", "min") {
-              &:after {
-                font-family: $font-family-heading;
-                font-size: $font-size-xxl;
-                position: absolute;
-                top: calc(50vh - 105px);
-                transform: rotate(270deg);
-              }
-            }
           }
         }
       }
