@@ -4,8 +4,7 @@ body.front-page {
     article.post-type-page {
       .home-section.home-about {
         @include mq("md", "min") {
-          display: none;
-          right: 100%;
+          transform: translateX(-100%);
         }
         .section-header.about-header {
           @include mq("xl", "min") {

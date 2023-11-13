@@ -4,8 +4,7 @@ body.front-page {
     article.post-type-page {
       .home-section.home-portfolio {
         @include mq("md", "min") {
-          display: none;
-          left: 100%;
+          transform: translateX(100%);
         }
 
         .section-header.portfolio-header {
