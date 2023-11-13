@@ -26,9 +26,13 @@ body.front-page {
           z-index: 1;
           width: 100%;
           min-height: 100vh;
-          border: solid 2px #000;
           background-color: $white;
           margin: $header-height 0 $footer-height 0;
+          @include mq("md", "max") {
+            .back-btn {
+              display: none;
+            }
+          }
 
           @include mq("md", "min") {
             position: absolute;
@@ -36,6 +40,21 @@ body.front-page {
             transition: transform 0.3s ease; /* Add transition for smooth sliding */
             &.show {
               transform: translateX(0);
+              .back-btn {
+                position: absolute;
+                top: calc(50vh - 105px);
+                cursor: pointer;
+                .circle {
+                  display: flex;
+                  width: 150px;
+                  height: 150px;
+                  background-color: $gray-med;
+                  border-radius: 100%;
+                  .back-icon {
+                    width: 50%;
+                  }
+                }
+              }
             }
           }
           .section-header {

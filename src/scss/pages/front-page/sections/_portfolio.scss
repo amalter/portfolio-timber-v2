@@ -5,6 +5,14 @@ body.front-page {
       .home-section.home-portfolio {
         @include mq("md", "min") {
           transform: translateX(100%);
+          &.show {
+            .back-btn {
+              left: -65px;
+              .circle {
+                transform: rotate(180deg);
+              }
+            }
+          }
         }
 
         .section-header.portfolio-header {

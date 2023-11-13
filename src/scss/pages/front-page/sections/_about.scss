@@ -5,6 +5,11 @@ body.front-page {
       .home-section.home-about {
         @include mq("md", "min") {
           transform: translateX(-100%);
+          &.show {
+            .back-btn {
+              right: -65px;
+            }
+          }
         }
         .section-header.about-header {
           @include mq("xl", "min") {
