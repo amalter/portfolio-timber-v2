@@ -7,6 +7,13 @@ body.front-page {
           transform: translateX(-100%);
           &.show {
             .back-btn {
+              right: -45px;
+            }
+          }
+        }
+        @include mq("lg", "min") {
+          &.show {
+            .back-btn {
               right: -65px;
             }
           }

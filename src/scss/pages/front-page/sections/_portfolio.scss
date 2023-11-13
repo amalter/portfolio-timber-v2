@@ -7,10 +7,18 @@ body.front-page {
           transform: translateX(100%);
           &.show {
             .back-btn {
-              left: -65px;
+              left: -45px;
               .circle {
                 transform: rotate(180deg);
               }
+            }
+          }
+        }
+
+        @include mq("lg", "min") {
+          &.show {
+            .back-btn {
+              left: -65px;
             }
           }
         }

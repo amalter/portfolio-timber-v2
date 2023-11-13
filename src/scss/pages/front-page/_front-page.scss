@@ -3,9 +3,7 @@ html,
 body.front-page {
   @include mq("md", "min") {
     overflow-y: hidden;
-    overflow-x: hidden; /* Prevent horizontal scroll */
-    height: 100%;
-    max-width: 100vw; /* Prevent horizontal overflow */
+    overflow-x: hidden;
   }
 }
 body.front-page {
@@ -28,6 +26,7 @@ body.front-page {
           min-height: 100vh;
           background-color: $white;
           margin: $header-height 0 $footer-height 0;
+          padding: $spacing--md;
           @include mq("md", "max") {
             .back-btn {
               display: none;
@@ -42,14 +41,28 @@ body.front-page {
               transform: translateX(0);
               .back-btn {
                 position: absolute;
-                top: calc(50vh - 105px);
+                top: 100px;
                 cursor: pointer;
                 .circle {
                   display: flex;
+                  width: 100px;
+                  height: 100px;
+                  background-color: $gray-light;
+                  border-radius: 100%;
+                  .back-icon {
+                    width: 50%;
+                  }
+                }
+              }
+            }
+          }
+          @include mq("lg", "min") {
+            &.show {
+              .back-btn {
+                top: calc(50vh - 105px);
+                .circle {
                   width: 150px;
                   height: 150px;
-                  background-color: $gray-med;
-                  border-radius: 100%;
                   .back-icon {
                     width: 50%;
                   }
@@ -76,7 +89,7 @@ body.front-page {
           }
 
           .wp-block-group__inner-container {
-            max-width: 980px;
+            max-width: $breakpoint--md;
           }
         }
       }
