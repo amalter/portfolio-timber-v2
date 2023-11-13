@@ -1,4 +1,4 @@
-export function mainNav() {
+export function homeNav() {
   // Get nav items
   const mainNavItems = document.querySelectorAll(".front-page-nav li a");
   //handle open
@@ -13,10 +13,11 @@ function openSection(e) {
   const pageSections = document.querySelectorAll(
     "body.front-page .home-section"
   );
-  if (clickedItemId === "portfolio" || clickedItemId === "about") {
+  if (clickedItemId === "portfolio-link" || clickedItemId === "about-link") {
     e.preventDefault();
+    const cleanItemId = clickedItemId.replace("-link", ""); // Remove "-link"
     pageSections.forEach(function (section) {
-      if (section.id === clickedItemId) {
+      if (section.id === cleanItemId) {
         section.classList.toggle("show");
         //handle close
         closeSection(section);
