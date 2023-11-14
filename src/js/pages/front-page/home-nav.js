@@ -36,6 +36,7 @@ function openSection(pageSections, e) {
     pageSections.forEach(function (section) {
       if (section.id === cleanItemId) {
         section.classList.toggle("show");
+        closeSection(section);
       } else {
         section.classList.remove("show");
       }
@@ -44,30 +45,33 @@ function openSection(pageSections, e) {
 }
 
 function closeSection(section) {
-  // Check if backButton already exists
-  const existingBackButton = section.querySelector(".back-btn");
-  if (!existingBackButton) {
-    const backButton = document.createElement("a");
-    const circle = document.createElement("div");
-    const arrowIcon = document.createElement("img");
+  // Check if the section has the "show" class
+  if (section.classList.contains("show")) {
+    // Check if backButton already exists
+    const existingBackButton = section.querySelector(".back-btn");
+    if (!existingBackButton) {
+      const backButton = document.createElement("a");
+      const circle = document.createElement("div");
+      const arrowIcon = document.createElement("img");
 
-    backButton.classList.add("back-btn");
-    circle.classList.add("circle");
+      backButton.classList.add("back-btn");
+      circle.classList.add("circle");
 
-    arrowIcon.src =
-      "wp-content/themes/portfolio-timber-v2/assets/icons/arrow-right-solid.svg";
-    arrowIcon.alt = "back to main";
-    arrowIcon.classList.add("back-icon");
+      arrowIcon.src =
+        "wp-content/themes/portfolio-timber-v2/assets/icons/arrow-right-solid.svg";
+      arrowIcon.alt = "back to main";
+      arrowIcon.classList.add("back-icon");
 
-    circle.appendChild(arrowIcon);
-    backButton.appendChild(circle);
-    section.appendChild(backButton);
+      circle.appendChild(arrowIcon);
+      backButton.appendChild(circle);
+      section.appendChild(backButton);
 
-    // Add event listener to handle the back action
-    backButton.addEventListener("click", function (e) {
-      e.preventDefault();
-      section.classList.remove("show");
-    });
+      // Add event listener to handle the back action
+      backButton.addEventListener("click", function (e) {
+        e.preventDefault();
+        section.classList.remove("show");
+      });
+    }
   }
 }
 
