@@ -33,7 +33,7 @@ $spacing--xxl: 2rem;
 
 $header-height: 34px;
 $footer-height: 38px;
-$panel-height: calc(100vh - 72px);
+$panel-height: calc(100vh - $header-height);
 $admin-panel-height: calc(100vh - 105px);
 
 $admin-toolbar-height: 32px;

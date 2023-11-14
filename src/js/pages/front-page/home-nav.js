@@ -12,6 +12,11 @@ export function homeNav() {
     item.addEventListener("click", function (e) {
       openSection(pageSections, e);
     });
+
+    // Add touch event for touch screens
+    item.addEventListener("touchstart", function (e) {
+      openSection(pageSections, e);
+    });
   });
 
   pageSections.forEach(function (section) {
@@ -73,6 +78,14 @@ function closeSection(section) {
         // Remove backButton when the "show" class is removed
         section.removeChild(backButton);
       });
+
+      // Add touch event for touch screens
+      backButton.addEventListener("touchstart", function (e) {
+        e.preventDefault();
+        section.classList.remove("show");
+        // Remove backButton when the "show" class is removed
+        section.removeChild(backButton);
+      });
     }
   }
 }
@@ -87,4 +100,7 @@ function checkHash() {
   } else if (currentURL.includes("#about")) {
     return "about";
   }
+
+  // If no hash is present or it doesn't match the expected values, return null or a default value
+  return null; // or "home" or any default value
 }
