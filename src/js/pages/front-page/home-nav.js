@@ -70,6 +70,8 @@ function closeSection(section) {
       backButton.addEventListener("click", function (e) {
         e.preventDefault();
         section.classList.remove("show");
+        // Remove backButton when the "show" class is removed
+        section.removeChild(backButton);
       });
     }
   }
