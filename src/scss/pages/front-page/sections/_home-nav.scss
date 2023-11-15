@@ -7,6 +7,7 @@ body.front-page {
     justify-content: center;
     align-items: stretch;
     .wp-block-group__inner-container {
+      align-self: center;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -57,26 +58,26 @@ body.front-page {
               &:before {
                 content: "";
                 display: inline-block;
-                width: 30px;
+                width: $icon-sm;
                 position: relative;
                 left: -$spacing--sm;
                 bottom: 0;
                 @include mq("md", "min") {
-                  width: 45px;
+                  width: $icon-lg;
                   left: -$spacing--md;
                   bottom: $spacing--xs;
                 }
               }
-              &#portfolio:before {
+              &#portfolio-link:before {
                 content: url("/wp-content/themes/portfolio-timber-v2/assets/icons/eye-regular.svg");
               }
-              &#about:before {
+              &#about-link:before {
                 content: url("/wp-content/themes/portfolio-timber-v2/assets/icons/star-regular.svg");
               }
-              &#blog:before {
+              &#blog-link:before {
                 content: url("/wp-content/themes/portfolio-timber-v2/assets/icons/pen-to-square-regular.svg");
               }
-              &#contact:before {
+              &#contact-link:before {
                 content: url("/wp-content/themes/portfolio-timber-v2/assets/icons/paper-plane-regular.svg");
               }
             }

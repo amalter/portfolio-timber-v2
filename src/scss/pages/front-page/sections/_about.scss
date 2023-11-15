@@ -18,12 +18,46 @@ body.front-page {
             }
           }
         }
-        .section-header.about-header {
+
+        .wp-block-group__inner-container {
           @include mq("xl", "min") {
-            left: -32px;
+            display: flex;
           }
-          &:before {
-            content: url("/wp-content/themes/portfolio-timber-v2/assets/icons/star-regular.svg");
+
+          .section-header.about-header {
+            @include mq("xl", "min") {
+              left: -32px;
+            }
+            &:before {
+              content: url("/wp-content/themes/portfolio-timber-v2/assets/icons/star-regular.svg");
+              @include mq("xl", "min") {
+                display: inline-block;
+                transform: rotate(90deg);
+              }
+            }
+          }
+          .wp-block-media-text {
+            &__media {
+              margin: auto;
+              border-radius: 100%;
+              aspect-ratio: 1/1;
+              z-index: 1;
+              max-height: 402px;
+            }
+            &__content {
+              border: dotted 10px rgba(132, 0, 132, 1);
+              background-color: $dark-magenta-transparent;
+
+              @include mq("md", "max") {
+                padding-bottom: $spacing--sm;
+                padding-top: $spacing--xxxl;
+                margin-top: -$spacing--xxxl;
+              }
+              @include mq("md", "min") {
+                padding: $spacing--xxl;
+                padding-left: 182px;
+              }
+            }
           }
         }
       }

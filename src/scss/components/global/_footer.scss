@@ -2,7 +2,7 @@
   position: fixed;
   width: 100vw;
   bottom: 0;
-  background-color: $black;
+  background-color: darken($dark-magenta, 10%);
   padding: $spacing--xs $spacing--sm;
   display: flex;
   justify-content: space-between;
