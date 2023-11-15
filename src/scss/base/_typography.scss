@@ -11,16 +11,12 @@ h6 {
   font-family: $font-family-heading;
   font-weight: $font-weight-bold;
 }
-h1:not(.site-logo),
-h2 {
-  margin: $spacing--lg 0 !important;
-}
 
 h3,
 h4,
 h5,
 h6 {
-  margin: $spacing--sm 0 !important;
+  margin: $spacing--sm 0;
 }
 
 h1 {

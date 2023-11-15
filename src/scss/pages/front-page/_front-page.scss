@@ -79,6 +79,7 @@ body.front-page {
             }
           }
           .section-header {
+            margin-top: 0;
             &:before {
               content: "";
               display: inline-block;
