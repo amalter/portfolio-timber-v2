@@ -9,22 +9,26 @@ import concat from "gulp-concat";
 import uglify from "gulp-uglify";
 import rename from "gulp-rename";
 import babel from "gulp-babel";
+import sourcemaps from "gulp-sourcemaps"; // Added source maps
 
 const sass = gulpSass(dartSass);
 
 gulp.task("styles", function () {
   return gulp
     .src("src/scss/**/*.scss")
+    .pipe(sourcemaps.init()) // Initialize source maps
     .pipe(sass().on("error", sass.logError))
     .pipe(autoprefixer("last 2 versions"))
     .pipe(cleanCSS())
     .pipe(rename({ suffix: ".min" }))
+    .pipe(sourcemaps.write(".")) // Write source maps to the same directory
     .pipe(gulp.dest("dist/css"));
 });
 
 gulp.task("scripts", function () {
   return gulp
     .src("src/js/main.js")
+    .pipe(sourcemaps.init()) // Initialize source maps
     .pipe(
       bro({
         transform: [["babelify", { presets: ["@babel/preset-env"] }]],
@@ -32,6 +36,7 @@ gulp.task("scripts", function () {
     )
     .pipe(uglify())
     .pipe(rename("all.min.js"))
+    .pipe(sourcemaps.write(".")) // Write source maps to the same directory
     .pipe(gulp.dest("dist/js"));
 });
 

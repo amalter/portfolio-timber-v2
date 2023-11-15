@@ -1,3 +1,6 @@
+import { breakpoints } from "../../helpers/breakpoints.js";
+import { checkBreakpoint } from "../../helpers/breakpoints.js";
+
 export function homeNav() {
   // Get nav items
   const mainNavItems = document.querySelectorAll(".front-page-nav li a");
@@ -7,17 +10,25 @@ export function homeNav() {
     "body.front-page .home-section"
   );
 
-  // handle open
-  mainNavItems.forEach(function (item) {
-    item.addEventListener("click", function (e) {
-      openSection(pageSections, e);
-    });
+  if (checkBreakpoint(breakpoints.md)) {
+    // handle open
+    mainNavItems.forEach(function (item) {
+      item.addEventListener("click", function (e) {
+        openSection(pageSections, e);
+      });
 
-    // Add touch event for touch screens
-    item.addEventListener("touchstart", function (e) {
-      openSection(pageSections, e);
+      // Add touch event for touch screens
+      item.addEventListener("touchstart", function (e) {
+        openSection(pageSections, e);
+      });
     });
-  });
+  } else {
+    // Remove the click events from mainNavItems
+    mainNavItems.forEach(function (item) {
+      item.removeEventListener("click", openSection);
+      item.removeEventListener("touchstart", openSection);
+    });
+  }
 
   pageSections.forEach(function (section) {
     if (section.id === "portfolio" || section.id === "about") {

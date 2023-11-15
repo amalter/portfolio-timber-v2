@@ -10,16 +10,14 @@ export const breakpoints = {
 };
 
 //helper functions
-export function runFunctionBreakpoint(width, callback) {
+export function checkBreakpoint(breakpoint) {
   function checkWindowWidth() {
-    if (window.innerWidth >= width) {
-      callback();
-    }
+    return window.innerWidth >= breakpoint;
   }
 
   // Attach the checkWindowWidth function to the window resize event
   window.addEventListener("resize", checkWindowWidth);
 
   // Check the window width on page load
-  checkWindowWidth();
+  return checkWindowWidth();
 }
