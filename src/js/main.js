@@ -8,4 +8,3 @@ smoothScroll();
 eyeBall();
 
 homeNav();
-//runFunctionBreakpoint(breakpoints.md, homeNav);

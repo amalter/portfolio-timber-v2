@@ -45,6 +45,7 @@ export function homeNav() {
 }
 
 function openSection(pageSections, e) {
+  //opens the about and portfolio sections on nav click
   const clickedItemId = e.currentTarget.id;
   if (clickedItemId === "portfolio-link" || clickedItemId === "about-link") {
     e.preventDefault();
