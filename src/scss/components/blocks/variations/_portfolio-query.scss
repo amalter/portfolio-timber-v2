@@ -16,13 +16,35 @@
       display: flex;
       flex-direction: column;
 
-      &:nth-of-type(odd) {
-        border: yellow 1px solid;
-        grid-column: span 2;
-      }
-      &:nth-of-type(even) {
-        border: purple 1px solid;
-        grid-row: span 2;
+      @include mq("md", "min") {
+        &:nth-of-type(1n) {
+          grid-column: span 2;
+        }
+
+        &:nth-of-type(2n) {
+          grid-row: span 2;
+          grid-column: span 2;
+        }
+        &:nth-of-type(3n) {
+          grid-row: span 1;
+          grid-column: span 1;
+        }
+        &:nth-of-type(4n) {
+          grid-column: span 1;
+          grid-row: span 1;
+        }
+        &:nth-of-type(5n) {
+          grid-column: span 2;
+          grid-row: span 1;
+        }
+        &:nth-of-type(6n) {
+          grid-column: span 1;
+          grid-row: span 1;
+        }
+        &:nth-of-type(7n) {
+          grid-column: span 1;
+          grid-row: span 1;
+        }
       }
 
       figure {

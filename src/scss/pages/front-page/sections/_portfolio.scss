@@ -6,6 +6,7 @@ body.front-page {
         @include mq("md", "min") {
           transform: translateX(100%);
           &.show {
+            height: auto;
             .back-btn {
               left: -45px;
               .circle {
@@ -37,6 +38,7 @@ body.front-page {
         }
 
         .wp-block-group__inner-container {
+          padding-bottom: $footer-height;
           .eye-outer {
             display: none;
           }
