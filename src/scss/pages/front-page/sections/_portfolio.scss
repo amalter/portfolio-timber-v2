@@ -6,7 +6,6 @@ body.front-page {
         @include mq("md", "min") {
           transform: translateX(100%);
           &.show {
-            height: auto;
             .back-btn {
               left: -45px;
               .circle {
@@ -38,7 +37,6 @@ body.front-page {
         }
 
         .wp-block-group__inner-container {
-          padding-bottom: $footer-height;
           .eye-outer {
             display: none;
           }
@@ -50,8 +48,8 @@ body.front-page {
               margin-top: 15px;
               svg {
                 display: block;
-                width: 75px;
-                height: 75px;
+                width: 45px;
+                height: 45px;
                 pointer-events: none;
                 transform-style: preserve-3d;
                 circle.eye {
@@ -64,6 +62,14 @@ body.front-page {
                   stroke-width: 1.3px;
                   stroke-linecap: round;
                 }
+              }
+            }
+          }
+          @include mq("xl", "min") {
+            .eye-outer {
+              svg {
+                width: 75px;
+                height: 75px;
               }
             }
           }
