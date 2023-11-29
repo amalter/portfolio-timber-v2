@@ -78,6 +78,8 @@ function closeSection(section) {
         "wp-content/themes/portfolio-timber-v2/assets/icons/arrow-right-solid.svg";
       arrowIcon.alt = "back to main";
       arrowIcon.classList.add("back-icon");
+      arrowIcon.width = "100";
+      arrowIcon.height = "100";
 
       circle.appendChild(arrowIcon);
       backButton.appendChild(circle);

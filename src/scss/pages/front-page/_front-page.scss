@@ -44,20 +44,7 @@ body.front-page {
               transform: translateX(0);
               .back-btn {
                 display: inline-block;
-
-                position: absolute;
                 top: 60px;
-                cursor: pointer;
-                .circle {
-                  display: flex;
-                  width: 100px;
-                  height: 100px;
-                  background-color: $dark-magenta-transparent;
-                  border-radius: 100%;
-                  .back-icon {
-                    width: 50%;
-                  }
-                }
               }
               .wp-block-group__inner-container {
                 padding-bottom: $footer-height;
@@ -70,15 +57,8 @@ body.front-page {
             align-items: stretch;
             &.show {
               .back-btn {
-                width: 150px;
+                display: inline-block;
                 top: calc(50vh - 105px);
-                .circle {
-                  width: 150px;
-                  height: 150px;
-                  .back-icon {
-                    width: 50%;
-                  }
-                }
               }
             }
           }

@@ -1,0 +1,53 @@
+.back-btn {
+  position: absolute;
+  top: 82px;
+  cursor: pointer;
+  .circle {
+    display: flex;
+    align-items: center;
+    width: 75px;
+    height: 75px;
+    background-color: $dark-magenta-transparent;
+    border-radius: 100%;
+
+    .back-icon {
+      width: 50%;
+    }
+  }
+  @include mq("md", "min") {
+    top: 57px;
+    .circle {
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  @include mq("lg", "min") {
+    width: 150px;
+    .circle {
+      width: 150px;
+      height: 150px;
+    }
+  }
+  @include mq("xl", "min") {
+    top: calc(50vh - 105px);
+  }
+}
+
+body.single .back-btn {
+  left: -32px;
+  .circle {
+    transform: rotate(180deg);
+  }
+  @include mq("md", "min") {
+    left: -45px;
+  }
+
+  @include mq("lg", "min") {
+    left: -65px;
+    .circle {
+      width: 150px;
+      height: 150px;
+    }
+  }
+}
