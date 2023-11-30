@@ -44,7 +44,7 @@ body.front-page {
               z-index: 1;
               max-height: 402px;
               @include mq("xl", "min") {
-                margin-left: 72px;
+                margin-left: 20px;
               }
             }
             &__content {

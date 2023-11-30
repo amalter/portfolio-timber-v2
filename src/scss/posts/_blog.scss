@@ -1,0 +1,61 @@
+body.blog {
+  .blog_wrapper {
+    position: relative;
+    max-width: $breakpoint--lg;
+    margin: 150px auto 50px;
+    padding: $spacing--md;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    &:before {
+      position: absolute;
+      top: -84px;
+      z-index: -1;
+      content: "";
+      display: inline-block;
+      background-image: url("/wp-content/themes/portfolio-timber-v2/assets/icons/pen-to-square-regular.svg");
+      background-size: 60px;
+      width: 150px;
+      height: 150px;
+      background-repeat: no-repeat;
+      background-position: 50% 25%;
+      background-color: $gray-light;
+      border-radius: 100%;
+    }
+    .wp-block-query {
+      * > a {
+        text-decoration: none;
+        color: $black;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      ul {
+        gap: $spacing--md;
+        li {
+          border: $border-lg solid $gray-light;
+          background-color: $white;
+          .wp-block-post-title {
+            font-size: $font-size-md-sm;
+            margin: $spacing--xs 0 $spacing--md;
+          }
+          .taxonomy-category {
+            a {
+              color: $gray-dark;
+            }
+          }
+        }
+      }
+      .wp-block-query-pagination {
+        margin: $spacing--md;
+        .page-numbers {
+          margin-left: $spacing--xs;
+          font-weight: $font-weight-light;
+          &.current {
+            font-weight: $font-weight-bold;
+          }
+        }
+      }
+    }
+  }
+}

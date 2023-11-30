@@ -1,0 +1,40 @@
+body.single {
+  & > .content-wrapper article {
+    padding: $spacing--md;
+    margin: $spacing--xxl auto;
+
+    &.post-type-post {
+      max-width: $breakpoint--lg;
+      margin: 150px auto 50px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      display: flex;
+      border: solid $border-lg $gray-light;
+      background-color: $white;
+      &:before {
+        position: absolute;
+        top: -92px;
+        z-index: -1;
+        content: "";
+        display: inline-block;
+        background-image: url("/wp-content/themes/portfolio-timber-v2/assets/icons/pen-to-square-regular.svg");
+        background-size: 60px;
+        width: 150px;
+        height: 150px;
+        background-repeat: no-repeat;
+        background-position: 50% 25%;
+        background-color: $gray-light;
+        border-radius: 100%;
+      }
+
+      h1 {
+        margin: 0 0 $spacing--lg 0;
+      }
+      @include mq("lg", "min") {
+        padding: $spacing--xxxl;
+      }
+    }
+  }
+}
