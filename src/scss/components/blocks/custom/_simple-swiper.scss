@@ -1,0 +1,20 @@
+.wp-block-create-block-simple-swiper {
+  .swiper {
+    .swiper-button-prev,
+    .swiper-button-next {
+      &:after,
+      &:before {
+        color: $black-70;
+      }
+    }
+    .swiper-pagination {
+      &-bullet {
+        width: 12px;
+        height: 12px;
+        &.swiper-pagination-bullet-active {
+          background-color: darken($cyan, 10%);
+        }
+      }
+    }
+  }
+}
