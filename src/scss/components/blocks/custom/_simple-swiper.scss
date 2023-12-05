@@ -5,6 +5,7 @@
       &:after,
       &:before {
         color: $black-70;
+        background-color: rgba(0, 255, 255, 0.1);
       }
     }
     .swiper-pagination {
@@ -12,7 +13,7 @@
         width: 12px;
         height: 12px;
         &.swiper-pagination-bullet-active {
-          background-color: darken($cyan, 10%);
+          background-color: darken($cyan, 15%);
         }
       }
     }
