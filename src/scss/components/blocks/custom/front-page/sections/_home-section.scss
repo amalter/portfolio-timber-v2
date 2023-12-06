@@ -1,0 +1,82 @@
+.wp-block-create-block-front-page {
+  .home-section {
+    min-height: 100vh;
+    @include mq("md", "min") {
+      min-height: $panel-height;
+    }
+
+    .inner-container {
+      height: 100%;
+      width: 100%;
+      align-self: center;
+    }
+    //shared styles
+    &.home-portfolio,
+    &.home-about {
+      z-index: 1;
+      width: 100%;
+      background-color: $white;
+      margin: $header-height 0 $footer-height 0;
+      padding: $spacing--md;
+
+      @include mq("md", "max") {
+        .back-btn {
+          display: none;
+        }
+      }
+
+      @include mq("md", "min") {
+        overflow-x: hidden;
+        overflow-y: scroll;
+        position: absolute;
+        top: 0;
+        transition: transform 0.5s ease; /* Add transition for smooth sliding */
+
+        height: auto;
+        transform: translateX(0);
+        .back-btn {
+          display: inline-block;
+          top: 60px;
+        }
+        .inner-container {
+          padding-bottom: $footer-height;
+        }
+      }
+      @include mq("lg", "min") {
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+
+        .back-btn {
+          display: inline-block;
+          top: calc(50vh - 105px);
+        }
+      }
+      .section-header {
+        margin-top: 0;
+        &:before {
+          content: "";
+          display: inline-block;
+          width: $icon-sm;
+          display: block;
+          margin: auto;
+          @include mq("xl", "min") {
+            width: $icon-lg;
+          }
+        }
+        @include mq("xl", "min") {
+          position: absolute;
+          top: calc(50vh - 105px);
+          transform: rotate(270deg);
+        }
+      }
+
+      .inner-container {
+        max-width: $breakpoint--md;
+        @include mq("xl", "min") {
+          max-width: $breakpoint--lg;
+        }
+      }
+    }
+  }
+}

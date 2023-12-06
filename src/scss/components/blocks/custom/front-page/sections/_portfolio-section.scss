@@ -1,0 +1,73 @@
+//home portfolio panel styles
+.wp-block-create-block-front-page {
+  .home-section.home-portfolio {
+    @include mq("md", "min") {
+      transform: translateX(100%);
+
+      .back-btn {
+        left: -45px;
+        .circle {
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    @include mq("lg", "min") {
+      .back-btn {
+        left: -65px;
+      }
+    }
+
+    .section-header.portfolio-header {
+      @include mq("xl", "min") {
+        right: -72px;
+      }
+
+      &:before {
+        content: url("/wp-content/themes/portfolio-timber-v2/assets/icons/eye-regular.svg");
+        @include mq("md", "min") {
+          display: none;
+        }
+      }
+    }
+
+    .inner-container {
+      .eye-outer {
+        display: none;
+      }
+      @include mq("md", "min") {
+        .eye-outer {
+          display: flex;
+          align-items: flex-start;
+          justify-content: center;
+          margin-top: 15px;
+          svg {
+            display: block;
+            width: 45px;
+            height: 45px;
+            pointer-events: none;
+            transform-style: preserve-3d;
+            circle.eye {
+              fill: $black;
+            }
+            path.top,
+            path.bottom {
+              fill: transparent;
+              stroke: $black;
+              stroke-width: 1.3px;
+              stroke-linecap: round;
+            }
+          }
+        }
+      }
+      @include mq("xl", "min") {
+        .eye-outer {
+          svg {
+            width: 75px;
+            height: 75px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,83 @@
+//home navigation panel styles
+.wp-block-create-block-front-page {
+  .home-section.home-nav {
+    position: relative;
+    z-index: 0;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    .inner-container {
+      align-self: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      nav.front-page-nav {
+        ul {
+          li {
+            padding: $spacing--lg;
+
+            transition: 0.5s, background-position 0.5s;
+            //start with transparent background
+            background: linear-gradient(
+                45deg,
+                rgba(255, 255, 255, 0) 0,
+                #fff 100%
+              )
+              var(--p, 0) / var(--p, 0) no-repeat;
+
+            &:nth-child(even) {
+              background-position: right;
+            }
+
+            &:hover {
+              --p: 100%;
+              background: $home-nav-gradient;
+
+              &:nth-child(odd) {
+                background-position: left;
+              }
+            }
+
+            a {
+              font-family: $font-family-heading;
+              font-size: $font-size-lg;
+              @include mq("md", "min") {
+                font-size: $font-size-xxl;
+              }
+              text-decoration: none;
+              color: $black;
+              width: 100%;
+              height: 100%;
+              display: block;
+              &:before {
+                content: "";
+                display: inline-block;
+                width: $icon-sm;
+                position: relative;
+                left: -$spacing--sm;
+                bottom: 0;
+                @include mq("md", "min") {
+                  width: $icon-lg;
+                  left: -$spacing--md;
+                  bottom: $spacing--xs;
+                }
+              }
+              &#portfolio-link:before {
+                content: url("/wp-content/themes/portfolio-timber-v2/assets/icons/eye-regular.svg");
+              }
+              &#about-link:before {
+                content: url("/wp-content/themes/portfolio-timber-v2/assets/icons/star-regular.svg");
+              }
+              &#blog-link:before {
+                content: url("/wp-content/themes/portfolio-timber-v2/assets/icons/pen-to-square-regular.svg");
+              }
+              &#contact-link:before {
+                content: url("/wp-content/themes/portfolio-timber-v2/assets/icons/paper-plane-regular.svg");
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
