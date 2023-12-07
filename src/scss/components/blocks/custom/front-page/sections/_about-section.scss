@@ -30,7 +30,7 @@
           }
         }
         &__content {
-          border: dotted 10px rgba(132, 0, 132, 1);
+          border: dotted 10px $dark-magenta-rgb;
           background-color: $dark-magenta-transparent;
 
           @include mq("md", "max") {
