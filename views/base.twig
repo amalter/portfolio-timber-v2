@@ -14,7 +14,8 @@
 					<h1 class="site-logo" role="banner">
 						<a class="site-logo-link" href="{{site.url}}" rel="home">{{site.name}}</a>
 					</h1>
-					<div class="ham-icon" id="ham-icon" role="button" aria-label="Toggle Navigation">
+					 {% if not fn('is_front_page') %}
+					 <div class="ham-icon" id="ham-icon" role="button" aria-label="Toggle Navigation">
 						<span></span>
 						<span></span>
 						<span></span>
@@ -23,6 +24,10 @@
 					<button id="close-btn" class="close-btn" aria-label="Close Navigation">&#10005;</button>
 						{% include "menu.twig" with {'items': menu.get_items} %}
 					</nav><!-- #nav -->
+					 
+					 {% endif %}
+					
+					
 				</div>
 			{% endblock %}
 		</header>
