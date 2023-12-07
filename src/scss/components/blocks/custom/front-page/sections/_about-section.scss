@@ -1,19 +1,6 @@
 //home about panel styles
 .wp-block-create-block-front-page {
   .home-section.home-about {
-    @include mq("md", "min") {
-      transform: translateX(-100%);
-
-      .back-btn {
-        right: -45px;
-      }
-    }
-    @include mq("lg", "min") {
-      .back-btn {
-        right: -65px;
-      }
-    }
-
     .inner-container {
       @include mq("xl", "min") {
         display: flex;

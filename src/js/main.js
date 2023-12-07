@@ -5,6 +5,6 @@ import { homeNav } from "./pages/front-page/home-nav.js";
 //global
 smoothScroll();
 //Function calls
-eyeBall();
+// eyeBall();
 
-homeNav();
+// homeNav();
