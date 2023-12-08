@@ -11,12 +11,18 @@
     font-weight: $font-weight-light;
     border-radius: $border-radius $border-radius 0 0;
 
+    background: repeating-linear-gradient(
+      135deg,
+      $cyan-gray,
+      $cyan-gray 8px,
+      $white 8px,
+      $white 12px
+    );
+
     @include mq("lg", "min") {
-      position: absolute;
-      -webkit-transform: rotate(-90deg);
-      transform: rotate(-90deg);
-      bottom: $spacing--md;
-      transform-origin: left bottom;
+      display: inline-block;
+      margin-left: 1rem;
+      padding: $spacing--sm $spacing--lg;
     }
   }
   ul.is-layout-grid {
