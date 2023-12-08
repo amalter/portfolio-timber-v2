@@ -9,11 +9,13 @@ nav#nav-main {
   padding: 20px;
   box-sizing: border-box;
   transition: right 0.3s ease;
+
   @include mq("md", "min") {
     width: fit-content;
   }
 
   ul {
+    display: none; /*needed for keyboard accessibility*/
     list-style: none;
     margin: 0;
     padding: 0;
@@ -31,6 +33,12 @@ nav#nav-main {
   & > ul {
     margin: $spacing--xxxl $spacing--xl $spacing--xl;
     padding: 0 $spacing--lg;
+  }
+  &.show {
+    right: 0;
+    ul {
+      display: block;
+    }
   }
   #close-btn {
     position: absolute;

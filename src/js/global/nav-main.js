@@ -7,14 +7,8 @@ export function navMain() {
   if (navMain && closeBtn) {
     // Handle click and touchstart events for hamburger icon
     function toggleNav() {
-      const computedStyle = window.getComputedStyle(navMain);
-      const currentRight = computedStyle.getPropertyValue("right");
-
-      if (currentRight === "0px") {
-        navMain.style.right = "-100%";
-      } else {
-        navMain.style.right = "0";
-      }
+      // Toggle the "show" class on navMain
+      navMain.classList.toggle("show");
     }
 
     hamIcon.addEventListener("click", toggleNav);
@@ -30,14 +24,15 @@ export function navMain() {
 
     // Handle click event for close button
     closeBtn.addEventListener("click", function () {
-      navMain.style.right = "-100%";
+      // Remove the "show" class to hide the navigation
+      navMain.classList.remove("show");
     });
 
     // Handle keyboard accessibility for closeBtn
     closeBtn.addEventListener("keydown", function (event) {
       if (event.key === "Enter" || event.key === " ") {
         // Trigger the same action as the click event for keyboard users
-        navMain.style.right = "-100%";
+        navMain.classList.remove("show");
       }
     });
   }
