@@ -3,8 +3,7 @@ hr.wp-block-separator {
     margin-top: $spacing--lg;
     &::before {
       content: "\223F\223F\223F\223F\223F\223F\223F\223F\223F\223F\223F\223F";
-
-      color: $light-magenta;
+      color: darken($cyan, 15%);
       font-size: 44px;
       letter-spacing: -7px;
       font-weight: bold;
