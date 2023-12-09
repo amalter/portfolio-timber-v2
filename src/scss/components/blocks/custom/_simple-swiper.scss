@@ -5,7 +5,7 @@
       &:after,
       &:before {
         color: $black-70;
-        background-color: rgba(0, 255, 255, 0.1);
+        background-color: rgba(0, 255, 255, 0.1) !important;
       }
     }
     .swiper-pagination {
