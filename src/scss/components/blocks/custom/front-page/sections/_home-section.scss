@@ -1,7 +1,9 @@
 .wp-block-create-block-front-page {
   .home-section {
+    height: auto;
     @include mq("md", "min") {
       min-height: $panel-height;
+      overflow: hidden;
     }
 
     //shared styles
@@ -14,6 +16,7 @@
       @include mq("md", "min") {
         &.show {
           .inner-container {
+            margin-top: $spacing--xxl;
             padding-bottom: $footer-height;
           }
         }
