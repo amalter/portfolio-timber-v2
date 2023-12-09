@@ -1,0 +1,14 @@
+hr.wp-block-separator {
+  &.is-style-dots {
+    margin-top: $spacing--lg;
+    &::before {
+      content: "\223F\223F\223F\223F\223F\223F\223F\223F\223F\223F\223F\223F";
+
+      color: $light-magenta;
+      font-size: 44px;
+      letter-spacing: -7px;
+      font-weight: bold;
+      padding: 0;
+    }
+  }
+}

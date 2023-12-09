@@ -1,15 +1,21 @@
 //home portfolio panel styles
 .wp-block-create-block-front-page {
   .home-section.home-portfolio {
-    .section-header.portfolio-header {
-      @include mq("xl", "min") {
-        right: -72px;
+    .inner-container {
+      @include mq("md", "min") {
+        margin-top: $spacing--xxl;
       }
 
-      &:before {
-        content: url("/wp-content/themes/portfolio-timber-v2/assets/icons/eye-regular.svg");
-        @include mq("md", "min") {
-          display: none;
+      .section-header.portfolio-header {
+        @include mq("xl", "min") {
+          right: -72px;
+        }
+
+        &:before {
+          content: url("/wp-content/themes/portfolio-timber-v2/assets/icons/eye-regular.svg");
+          @include mq("md", "min") {
+            display: none;
+          }
         }
       }
     }

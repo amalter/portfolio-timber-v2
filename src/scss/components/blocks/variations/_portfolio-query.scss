@@ -14,9 +14,9 @@
     background: repeating-linear-gradient(
       135deg,
       $cyan-gray,
-      $cyan-gray 8px,
-      $white 8px,
-      $white 12px
+      $cyan-gray 2px,
+      $white 2px,
+      $white 4px
     );
 
     @include mq("lg", "min") {
