@@ -1,6 +1,9 @@
 //home navigation panel styles
 .wp-block-create-block-front-page {
   .home-section.home-nav {
+    @include mq("md", "max") {
+      height: 100vh;
+    }
     position: relative;
     z-index: 0;
     display: flex;
@@ -15,6 +18,10 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        @include mq("md", "max") {
+          margin-top: $spacing--xxxl;
+          align-self: flex-start;
+        }
         ul {
           li {
             padding: $spacing--lg;
