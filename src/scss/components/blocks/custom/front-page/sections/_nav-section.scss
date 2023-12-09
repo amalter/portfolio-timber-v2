@@ -83,10 +83,10 @@
         #contact-info-wrapper {
           border: none;
           display: inline-block;
-          background-color: $dark-magenta-transparent;
+          background-color: $cyan-gray;
           padding: 0 $spacing--md;
           &.show {
-            border: dotted $dark-magenta-rgb 6px;
+            border: dotted $dark-cyan 6px;
           }
         }
       }
