@@ -1,6 +1,7 @@
 body.single {
   & > .content-wrapper article {
     padding: $spacing--md;
+
     margin: $spacing--xxl auto;
 
     &.post-type-post {
