@@ -1,6 +1,12 @@
 //home about panel styles
 .wp-block-create-block-front-page {
   .home-section.home-about {
+    @include mq("xl", "min") {
+      &.show {
+        height: auto !important;
+      }
+    }
+
     .inner-container {
       @include mq("xl", "min") {
         display: flex;
